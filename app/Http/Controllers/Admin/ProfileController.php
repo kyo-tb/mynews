@@ -73,7 +73,8 @@ class ProfileController extends Controller
         $processes->edited_at = Carbon::now();
         $processes->save();
         
-        return redirect('admin/profile/edit');
+        // return redirect('admin/profile/edit');
+        return view('admin.profile.edit', ['profile_form' => $profile]);
     }
     
     
